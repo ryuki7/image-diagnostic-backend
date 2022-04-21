@@ -87,7 +87,7 @@ def select_cascade(kind):
       '雰囲気（スタイル）': 'haarcascade_upperbody'
     }
 
-    cascade_path = './opencv/haarcascades/{}.xml'
+    cascade_path = 'opencv/haarcascades/{}.xml'
     cascade = cv2.CascadeClassifier(cascade_path.format(cascade_dict[kind]))
     return cascade
 
