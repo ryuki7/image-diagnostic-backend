@@ -11,7 +11,7 @@ def get_diagnostic_result(cutting_image_data_list, kind):
     # 255で割ることで正規化する。(RGBの数値を0〜1の範囲内に収めるようにする。色は0から255までの値を使って表現している為。)
     cutting_image_data_list = cutting_image_data_list / 255
 
-    origin_model_file_path = '{}.xml'
+    origin_model_file_path = './{}.xml'
     model_file_path = origin_model_file_path.format(select_model_file_path(kind))
     # 保存してある学習済みモデルをロードする
     loaded_model = pickle.load(open(model_file_path, 'rb'))
